@@ -7,6 +7,11 @@ body {
     background-color: #595358;
 }
 
+#main-div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 #header {
     display: flex;
     justify-content: center;
@@ -15,7 +20,7 @@ body {
     height: 10vh;
     width: 100vw;
     border-bottom: 2px solid white;
-    box-shadow: 5px 5px 30px white;
+    box-shadow: 5px 5px 30px black;
 
     #header-left {
         width: 20%;
@@ -59,35 +64,126 @@ body {
 
 #User-div {
     display: flex;
-    height: 100vh;
     justify-content: space-around;
     margin-top: 20px;
     border: 2px solid white;
+    box-shadow: 5px 5px 30px black;
+
 
     #profile-pic {
+        margin: 10px 10px;
         height: 200px;
         width: 200px;
-        border-radius: 50%;
     }
 
     #user-bio {
         display: flex;
-        border: 2px solid green;
         height: 30vh;
         width: 80vw;
+        gap: 20px;
 
         #bio-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
             width: 50%;
-            margin-top: 10px;
+            margin: 10px 10px;          
+
         }
 
         #bio-right {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: flex-end;
-            gap: 20px;
+            font-weight: bold;
+            /* gap: 12px; */
             width: 50%;
+            margin: 10px 10px;
+            overflow: auto;
+
+            .social {
+                display: flex;
+                justify-content: center;
+                align-items: centerd;
+            }
+
+            img {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+#roster-div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 25vh;
+    border: 5px solid black;
+    box-shadow: 5px 5px 30px black;
+
+    #roster-heading {
+        display: flex;
+        height: 20%;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    #roster-contents {
+        display: flex;
+        justify-content: space-evenly;
+        height: 80%;
+
+        .roster-member {
+            height: 100%;
+            overflow: auto;
+            font-weight: bold;
+            color: white;
+
+            img {
+                height: 100px;
+                width: 100px;
+                border: 2px solid white;
+                box-shadow: 5px 5px 30px black;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+#second-layer {
+    display: flex;
+    gap: 20px;
+
+    #schedule-div {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        height: 50vh;
+        border: 5px solid black;
+        box-shadow: 5px 5px 30px black;
+        overflow: auto;
+
+        #schedule-heading {
+            text-align: center;
+            border-bottom: 2px solid black;
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        #schedule-days {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 13px;
+            margin-top: 10px;
+            margin-left: 5px;
         }
     }
 }
